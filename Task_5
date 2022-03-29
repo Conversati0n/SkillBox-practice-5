@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace Task_5
+{
+  public class Program
+  {
+    public static void Main (string[]args)
+    {
+        string InputString = Console.ReadLine ();
+        string[] xString = SplitString (InputString);
+        WriteString (xString);
+    }
+
+    public static string[] SplitString (string String)
+    {
+      string[] s = String.Split (' ');
+      return s;
+    }
+
+    public static void WriteString (string[]String)
+    {
+      foreach (var sub in String)
+      {
+	    Console.WriteLine (sub);
+      }
+    }
+  }
+}
