@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+class HelloWorld
+{
+  static void Main ()
+  {
+    ReverseWords (Console.ReadLine ());
+  }
+
+  static void ReverseWords (string inputPhrase)
+  {
+    string ResultStr = "";
+
+    string[]StrArr = SplitString (inputPhrase);
+
+    for (int i = StrArr.Length - 1; i >= 0; i--)
+      {
+	ResultStr += StrArr[i] + " ";
+      }
+
+    Console.WriteLine (ResultStr);
+  }
+
+  static string[] SplitString (string Str)
+  {
+    return Str.Split (' ');
+  }
+}
